@@ -22,14 +22,14 @@ li {
   border: none;
   margin: 0;
   padding: 0;
-  background: transparent;
+  cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 /* Base Styles */
 html,
-body {
-  background-color: white;
+body,
+a {
   font-family: "Raleway", "Arial", sans-serif;
   color: #555;
   font-weight: 400;
@@ -48,6 +48,7 @@ header {
 
 section {
   padding: 2rem;
+  padding: 80px 2rem;
 }
 /* Slogan */
 .slogan {
@@ -74,7 +75,10 @@ section {
 }
 
 .btn_trial {
-  margin-top: 1rem;
+  margin-top: 4rem;
+  width: 25%;
+  font-size: 100%;
+  font-weight: 700;
 }
 .gym__facilities,
 .location,
@@ -82,12 +86,24 @@ footer {
   background-color: var(--secondary);
 }
 .btn {
+  position: relative;
+
   background-color: var(--primary);
   border-radius: 5px;
   padding: 1rem;
   color: #fff;
+  box-shadow: 0 5px 0 #7b190f;
 }
 
+.btn:hover {
+  background-color: #a82315;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 5px;
+}
 .logo_container,
 .menu_container {
   border-radius: 6px;
@@ -116,12 +132,13 @@ footer {
 }
 
 /* Facilities */
-.gym__facilities {
+.facilities {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-self: center;
   gap: 1rem;
   color: #fff;
+  margin-top: 2rem;
 }
 
 .facility_img {
@@ -143,6 +160,8 @@ figcaption {
 }
 
 /* Pricing */
+.plans {
+}
 .plan__container {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
   padding-left: 45px;
@@ -159,7 +178,8 @@ figcaption {
   gap: 2rem;
 }
 
-.gym__pricing {
+.plans {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -194,6 +214,14 @@ figcaption {
 h2 {
   text-align: center;
   text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.location h2,
+.gym__facilities h2 {
+  color: #fff;
 }
 
 .fa-bars {
@@ -227,6 +255,10 @@ h2 {
   margin-right: 15px;
 }
 
+.map {
+  width: 100%;
+  height: auto;
+}
 iframe {
   margin-top: 2rem;
   width: 100%;
@@ -284,6 +316,10 @@ footer {
 .links {
   flex-direction: column;
 }
+
+.link__container li a:hover {
+  color: #fff;
+}
 /* Mobile Styling */
 
 /* Nav */
@@ -295,46 +331,110 @@ nav {
 }
 
 .links__container {
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 80px;
-  left: 0;
-  width: 100vw;
-  height: calc(100vh - 60px);
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 80px);
   background-color: #14141494;
   border-top: 1px solid black;
-  display: none;
   align-items: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
 }
-
+.expand_nav {
+  left: 0;
+}
 .links__container li {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .links__container :hover {
   background-color: #6b69692f;
   color: #e53e2d;
 }
-.expand_nav {
-  display: flex;
-  flex-direction: column;
-}
 
 /* #Media Styling - Mobile to Desktop */
 
 /* Mobile Phone Styles */
 @media screen and (min-width: 425px) {
+  /* Header */
+  /* Gym Feature */
+  /* Gym Facilities */
+  /* Gym Pricing */
+  /* Location */
+  /* Contact US */
 }
 
 /* --Small Tablet Styles */
 @media screen and (min-width: 768px) {
-}
-/* --Large Table Styles  */
+  /* Header */
+  /* Gym Feature */
+  .feature_container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  /* Gym Facilities */
+  /* Gym Pricing */
+  .plans {
+    align-items: center;
+  }
 
+  .plan__container {
+    width: 70%;
+  }
+  /* Location */
+  /* Contact US */
+}
 /* --Desktop Styles */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  /* Header */
+
+  .links__container {
+    width: 40%;
+  }
+
+  .links__container li {
+    height: 10%;
+  }
+
+  .slogan__text_container {
+    width: 70%;
+  }
+  /* Gym Feature */
+  /* Gym Facilities */
+  .facilities {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  /* Gym Pricing */
+  .plans {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .plan__container {
+    width: 40%;
+  }
+  /* Location */
+
+  .location__description {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 5rem;
+  }
+  iframe {
+    margin-top: 0;
+  }
+  /* Contact US */
+  .form__wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
