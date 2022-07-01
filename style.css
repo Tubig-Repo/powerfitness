@@ -52,7 +52,7 @@ section {
 }
 /* Slogan */
 .slogan {
-  margin-top: 15%;
+  margin-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -406,7 +406,7 @@ nav {
   }
 
   .slogan__text_container {
-    width: 70%;
+    width: 50%;
   }
   /* Gym Feature */
   /* Gym Facilities */
