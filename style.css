@@ -326,8 +326,10 @@ footer {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #2a2a2a69;
   padding: 0 2rem;
+  height: auto;
 }
 
 .links__container {
@@ -339,7 +341,7 @@ nav {
   width: 100%;
   height: calc(100vh - 80px);
   background-color: #14141494;
-  border-top: 1px solid black;
+
   align-items: center;
   transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -396,9 +398,21 @@ nav {
 /* --Desktop Styles */
 @media screen and (min-width: 1024px) {
   /* Header */
-
+  .menu_container {
+    display: none;
+  }
   .links__container {
+    position: initial;
+    left: 0;
+    top: 0;
+    flex-direction: row;
+    height: 100%;
     width: 40%;
+    background-color: initial;
+  }
+
+  .links__container :hover {
+    background-color: inherit;
   }
 
   .links__container li {
