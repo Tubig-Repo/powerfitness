@@ -282,11 +282,12 @@ form {
 .input__container {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .input__container input,
 .input__container select {
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 
 .button__container {
@@ -436,19 +437,22 @@ nav {
     width: 40%;
   }
   /* Location */
-
   .location__description {
     width: 100%;
     margin: 0 auto;
     display: flex;
     gap: 5rem;
   }
+
+  .location__address {
+    width: 70%;
+  }
   iframe {
     margin-top: 0;
   }
   /* Contact US */
   .form__wrapper {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
 }
