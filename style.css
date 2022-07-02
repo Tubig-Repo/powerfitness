@@ -52,7 +52,6 @@ section {
 }
 /* Slogan */
 .slogan {
-  margin-top: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,9 +329,14 @@ nav {
   align-items: center;
   background-color: #2a2a2a69;
   padding: 0 2rem;
-  height: auto;
+  width: 100%;
+  z-index: 100;
 }
 
+.nav.sticky {
+  position: fixed;
+  background-color: #2a2a2afb;
+}
 .links__container {
   display: flex;
   flex-direction: column;
@@ -452,7 +456,7 @@ nav {
   }
   /* Contact US */
   .form__wrapper {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
   }
 }
