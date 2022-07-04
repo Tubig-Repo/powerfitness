@@ -56,6 +56,10 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .slogan_styling {
