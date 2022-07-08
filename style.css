@@ -418,7 +418,7 @@ nav {
   left: -100%;
   width: 100%;
   height: calc(100vh - 80px);
-  background-color: #14141494;
+  background-color: #141414e0;
 
   align-items: center;
   transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
@@ -513,6 +513,7 @@ nav {
   .plan__container {
     width: 40%;
   }
+
   /* Location */
   .location__description {
     width: 100%;
@@ -531,5 +532,10 @@ nav {
   .form__wrapper {
     width: 50%;
     margin: 0 auto;
+  }
+
+  /* Customer Feedback */
+  .slider {
+    width: 80%;
   }
 }
