@@ -1,0 +1,427 @@
+/*--------------------------------------------- * /
+/* BASIC SETUP * /
+/* ----------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color: white;
+    font-family: 'Raleway' , 'Arial' , sans-serif ;
+    color: #555;
+    font-weight:400;
+    font-size: 25px;
+    text-rendering: optimizeLegibility;
+    
+}
+/*--------------------------------------------- * /
+/* REUSABLE COMPONENTS * /
+/* ----------------------------------------------*/
+
+.row{
+    max-width: 1440px;
+    margin : 0 auto 0 auto;
+}
+
+section{
+    padding : 80px 0 ;
+}
+
+/*--------------------------------------------- * /
+/* HEADER * /
+/* ----------------------------------------------*/
+header{
+    background: linear-gradient(rgba(0, 0, 0, 0.438) , rgba(0, 0, 0, 0.438)) ,url(img/gym-bg1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 30px;
+}
+
+.gym-nav{
+    list-style-type: none;
+    float : right;
+    margin-top: 60px;
+}
+
+.gym-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.gym-nav li a:link, 
+.gym-nav li a:visited{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:90%;
+    
+
+}
+
+.gym-nav li a:hover,
+.gym-nav li a:active{
+
+    border-bottom : 2px solid #e53e2d;
+    transition: border-bottom  0.2s ;
+}
+
+.gym-text-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-90% , -50%);
+    
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 290%;
+    margin :0;
+    padding : 15px;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    border: 2px solid white;    
+    margin-bottom: 20px;
+    color : #fff;
+}
+
+
+
+
+
+
+
+/*  BUTTONS ------------------------------------------------------------------------*/
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding : 10px;
+    margin-left: 20px;
+    background-color: #e53e2d;
+    box-shadow: 0 5px 0 #7b190f;
+    
+}
+
+.btn:hover{
+    background-color: #a82315;
+    transition:  background-color 0.2s , color 0.2s;
+}
+.btn:active{
+    box-shadow: none;
+    top:5px;
+}
+/*  ICONS ------------------------------------------------------------------------*/
+/* gym feature icons */
+.icon-big {
+    font-size: 250%;
+    display: block;
+    color:#e53e2d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* pricing icons */
+.icon-plan {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+    color: #e53e2d;
+    font-size: 150%;
+}
+/*--------------------------------------------- * /
+/* FEATURES * /
+/* ----------------------------------------------*/
+
+/*Feature Headings*/
+h2,h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size : 190%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    
+}
+
+/*red line between the heading and the features*/
+h2:after{
+    display:block;
+    height: 2px;
+    background-color: #e53e2d;
+    content: " ";
+    width:100px;
+    margin: 0 auto;
+     margin-top: 30px; 
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.features {
+    margin-top: 1% ;
+    margin-bottom: 1%;
+}
+.box {
+    padding : 1%;    
+  
+}
+/*feature paragraphs*/
+.box p {
+    font-size: 70%;
+    line-height: 145%;
+}
+
+
+/*--------------------------------------------- * /
+/* Gym Facilities * /
+/* ----------------------------------------------*/
+
+.clearfix{
+    zoom: 1;
+}
+
+.clearfix::after{
+    content: '.';
+    clear:both;
+    display: block;
+    height:0;
+    visibility: hidden;
+}
+
+
+.gym-facilities{
+    padding: 100px 0 ;
+    background-color:#2a2a2a;
+    color:#fff;
+
+}
+
+.gym-showcase {
+    list-style: none;
+    width:100%;
+   
+}
+
+.gym-showcase li {
+    display: block;
+    float: left;
+    width:25%;
+    padding: 10px;  
+}
+
+.gym-photo{
+    width:100%;
+    height: auto;
+    margin:0px;
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+     
+}
+
+.gym-photo img {
+    opacity : 0.7;
+    width : 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: opacity 0.5s , transform 0.5s;
+   
+  
+}
+
+.gym-photo img:hover
+{
+    opacity: 1;
+    transform: scale(1.03);
+   
+}
+
+.gym-photo figcaption {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 100%;
+    pointer-events: none;
+}
+
+
+/*--------------------------------------------- * /
+/* Location * /
+/* ----------------------------------------------*/
+
+.location-section {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+.location-contact h3 {
+
+    text-align: left;
+    font-weight: 600;
+   
+}
+.location-contact i {
+    margin-right: 20px;
+}
+.location-contact h3:after{
+    display:block;
+    height: 2px;
+    background-color: #e53e2d;
+    content: " ";
+    width:80%;
+    margin: 0;
+     margin-top: 15px;
+}
+
+.location-contact:last-child{
+    margin-top: 25%;
+}
+
+.location-contact p {
+    font-size: 80%;
+    width:50%;
+}
+
+.mapouter{
+    margin: 0 auto;
+}
+
+/*--------------------------------------------- * /
+/* Pricing * /
+/* ----------------------------------------------*/
+
+
+.pricing-section{
+    background-color: #fff;
+}
+
+.plan-box{
+    border : 1px solid rgb(207, 206, 206);
+    border-radius: 10px;
+    background-color: #fff;
+    width:70%;
+    margin : 0 auto; 
+}
+.plan-box div {
+    padding : 15px;
+}
+
+.plan-headings{
+    border-bottom:  1px solid rgb(207, 206, 206);
+}
+
+.plan-headings h3 {
+    text-align: left;
+}
+
+.plan-headings p{
+    text-align: center;
+    color: #e53e2d;
+    font-size: 180%;
+    font-weight: 600;
+}
+.plan-headings p span{
+    font-size: 35%;
+}
+.plan-description ul li  {
+    list-style: none;
+    padding : 5px;
+    font-size: 75%;
+}
+
+.join-now  {
+    text-align: center;
+}
+/*--------------------------------------------- * /
+/* Contacts * /
+/* ----------------------------------------------*/
+.contact-section{
+    width: 60%;
+    margin: 0 auto;
+    border : 2px solid rgb(197, 197, 197);
+    padding : 50px;
+    border-radius: 10px;
+    font-size : 85%;
+}
+
+input , select , textarea {
+    width: 100%;
+    border-radius: 3px;
+    border : 1px solid #ccc;
+    padding : 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=submit]{
+    margin : 0;
+    cursor: pointer;
+}
+
+*:focus{outline: none;}
+/*--------------------------------------------- * /
+/* Footer * /
+/* ----------------------------------------------*/
+
+footer {
+    background-color: #2a2a2a;
+    padding:60px;
+}
+
+.footer-nav li , .footer-gym-links li {
+    display: inline-block;
+    list-style: none;
+    margin-right:20px;
+}
+.footer-nav li {  
+    float:left; 
+    font-size: 70%;
+   
+}
+
+.footer-gym-links li{
+    float:right;
+    font-size: 120%;
+}
+
+.footer-gym-links li a ,
+.footer-nav li a {
+    text-decoration: none;
+    color : rgb(136, 135, 135);
+    vertical-align: middle;
+}
+.footer-gym-links li a:hover ,
+.footer-nav li a:hover {
+    color: #FFF;
+}
+
+footer p {
+
+    text-align: center;
+    margin-top: 30px;
+    font-size:70%;
+    
+}

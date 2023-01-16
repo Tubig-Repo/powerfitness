@@ -1,0 +1,541 @@
+/* Variables */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+:root {
+  --primary: #e53e2d;
+  --secondary: #2a2a2a;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+
+.btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* Base Styles */
+html,
+body,
+a {
+  font-family: "Raleway", "Arial", sans-serif;
+  color: #555;
+  font-weight: 400;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.438)),
+    url("./img/gym-bg1.jpg");
+  color: #fff;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  padding: 2rem;
+  padding: 80px 2rem;
+}
+/* Slogan */
+.slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slogan_styling {
+  color: var(--primary);
+}
+.slogan__text_container {
+  width: 100%;
+  border: 2px solid white;
+  padding: 1rem;
+}
+.slogan__text_container p {
+  text-align-last: left;
+  line-height: 1.5;
+  font-size: 200%;
+  font-weight: 600;
+}
+
+.btn_trial {
+  margin-top: 4rem;
+  width: 25%;
+  font-size: 100%;
+  font-weight: 700;
+}
+.gym__facilities,
+.location,
+footer {
+  background-color: var(--secondary);
+}
+.btn {
+  position: relative;
+
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 5px 0 #7b190f;
+}
+
+.btn:hover {
+  background-color: #a82315;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 5px;
+}
+.logo_container,
+.menu_container {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Features */
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.feature p {
+  text-align: center;
+}
+.gym__features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Facilities */
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-self: center;
+  gap: 1rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.facility_img {
+  width: 100%;
+
+  opacity: 0.8;
+}
+figure {
+  position: relative;
+  margin-bottom: 2rem;
+}
+figcaption {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Pricing */
+.plan__container {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.plans {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.pricing {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 33px;
+  font-weight: 500;
+}
+.pricing::before {
+  content: "$";
+  font-size: 20px;
+}
+
+.pricing::after {
+  content: "/month";
+  font-size: 20px;
+}
+.plan__description {
+  margin-top: 2rem;
+}
+.perk_list li {
+  margin-bottom: 15px;
+}
+
+.perk_list li span:first-child {
+  margin-right: 13px;
+}
+
+/* Fonts */
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200%;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.location h2,
+.gym__facilities h2 {
+  color: #fff;
+}
+
+.fa-bars {
+  font-size: 2em;
+  height: auto;
+}
+
+.icon_big {
+  font-size: 4em;
+  color: var(--primary);
+}
+
+/* Location */
+.location__header {
+  margin-bottom: 2rem;
+}
+.location__address {
+  background-color: rgba(255, 255, 255, 0.979);
+  padding: 2rem;
+  box-shadow: 0 6px 30px rgba(170, 170, 170, 0.185);
+  border-radius: 5px;
+}
+
+.location__address h3 {
+  margin-bottom: 15px;
+}
+.contacts {
+  margin-top: 2rem;
+}
+.address_icon {
+  margin-right: 15px;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+}
+iframe {
+  margin-top: 2rem;
+  width: 100%;
+  height: 400px;
+}
+/* Customer Feedback */
+.slider {
+  width: 100%;
+  height: 50rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.testimonial_heading {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.testimonial_author {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+}
+.testimonial_photo {
+  border-radius: 50%;
+  width: 6rem;
+  grid-row: 1 / span 2;
+}
+.testimonial_name {
+  font-size: 1rem;
+  align-self: end;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 5%;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots__dot--active {
+  background-color: var(--primary);
+  opacity: 1;
+}
+
+/* Form  - Contact US*/
+.contact__us {
+  border-top: 1px solid #2a2a2a70;
+}
+.form__wrapper {
+  margin-top: 1rem;
+}
+form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid rgba(109, 104, 104, 0.39);
+  border-radius: 5px;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input__container input,
+.input__container select {
+  padding: 0.5rem;
+}
+
+.button__container {
+  max-width: 100%;
+}
+
+.btn_submitForm {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.gym__links,
+.social__links {
+  padding: 1rem;
+}
+.links,
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.links {
+  flex-direction: column;
+}
+
+.link__container li a:hover {
+  color: #fff;
+}
+/* Mobile Styling */
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a2a69;
+  padding: 0 2rem;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: #2a2a2afb;
+}
+.links__container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #141414e0;
+  z-index: 10;
+  align-items: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+.expand_nav {
+  left: 0;
+}
+.links__container li {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.links__container :hover {
+  background-color: #6b69692f;
+  color: #e53e2d;
+}
+
+/* #Media Styling - Mobile to Desktop */
+
+/* Mobile Phone Styles */
+@media screen and (min-width: 425px) {
+  /* Header */
+  /* Gym Feature */
+  /* Gym Facilities */
+  /* Gym Pricing */
+  /* Location */
+  /* Contact US */
+}
+
+/* --Small Tablet Styles */
+@media screen and (min-width: 768px) {
+  /* Header */
+  /* Gym Feature */
+  .feature_container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  /* Gym Facilities */
+  /* Gym Pricing */
+  .plans {
+    align-items: center;
+  }
+
+  .plan__container {
+    width: 70%;
+  }
+  /* Location */
+  /* Contact US */
+}
+/* --Desktop Styles */
+@media screen and (min-width: 1024px) {
+  /* Header */
+  .menu_container {
+    display: none;
+  }
+  .links__container {
+    position: initial;
+    left: 0;
+    top: 0;
+    flex-direction: row;
+    height: 100%;
+    width: 40%;
+    background-color: initial;
+  }
+
+  .links__container :hover {
+    background-color: inherit;
+  }
+
+  .links__container li {
+    height: 10%;
+  }
+
+  .slogan__text_container {
+    width: 50%;
+  }
+  /* Gym Feature */
+  /* Gym Facilities */
+  .facilities {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  /* Gym Pricing */
+  .plans {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .plan__container {
+    width: 40%;
+  }
+
+  /* Location */
+  .location__description {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 5rem;
+  }
+
+  .location__address {
+    width: 70%;
+  }
+  iframe {
+    margin-top: 0;
+  }
+  /* Contact US */
+  .form__wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  /* Customer Feedback */
+  .slider {
+    width: 80%;
+  }
+}
